@@ -82,10 +82,11 @@ Or using Homebrew...
 ```
 brew tap aspnet/dnx
 brew update
+brew install icu4c
 brew install dnvm
 ```
 
-To install the latest version, run the command `dnvm upgrade`.
+To install the latest version, run the command `dnvm upgrade` or `dnvm upgrade -r coreclr`.
 
 To list the installed versions, run the command `dnvm list`.
 

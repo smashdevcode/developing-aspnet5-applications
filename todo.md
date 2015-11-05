@@ -1,15 +1,28 @@
 
 # TODO
 
-1. Update the Yeoman ASP.NET templates
-1. Review DNX installation instructions and steps
- 1. Looks like the installation on Mac OS X has changed??? http://docs.asp.net/en/latest/getting-started/installing-on-mac.html
-1. Update the setup.md file
-1. Update the Yeoman ASP.NET templates in the Sandbox image
+1. DONE Update the Yeoman ASP.NET templates
+1. DONE Install ASP.NET
+1. DONE Try building out a coreclr app and publish to Azure
+1. DONE Update the global.json file to target Beta8
+ 1. Update both the demos.md file and the code snippets
+1. Export the code snippets to the repo
+
+1. Just plan on installing Beta7 and building out another demo app with that for deploying to Azure???
+
+1. Update references to `dnx kestrel` to `dnx web`
+
+1. Update the Sandbox image
+ 1. Update the Yeoman ASP.NET templates
+ 1. Remove the old GitHub repo
+ 1. Clone the new GitHub repo
+ 1. Update the code snippets
+ 1. Update the bash_profile with call to `source dnvm.sh`
+
+1. Reset the Dry Run image
 1. Run through slides
 1. Run through demo
 1. Test publishing to Azure
-1. Reset the Dry Run image
 1. Reset the Live image
 
 New Features to Test

@@ -8,6 +8,7 @@ Using Homebrew...
 ```
 brew tap aspnet/dnx
 brew update
+brew install icu4c
 brew install dnvm
 source dnvm.sh
 dnvm

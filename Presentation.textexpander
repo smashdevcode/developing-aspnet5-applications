@@ -27,7 +27,7 @@
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>A518FDF1-15FE-4B56-B35C-0431E09A7493</string>
+			<string>5406FAC4-91F5-4644-9545-F117809136C2</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -45,7 +45,7 @@
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>BD23073D-7134-496B-B1A1-1DAA23AFE7C4</string>
+			<string>B9D50E23-4B35-4325-91F7-81D9F33AD31F</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -63,7 +63,7 @@
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>871494CE-95C6-440F-8093-455BF359F23B</string>
+			<string>7679FA28-5181-4559-A3D9-8F3BDD95F90D</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -92,7 +92,7 @@ else
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>0DFF2228-1235-4F81-B545-FEBCD03BFE0F</string>
+			<string>ABC53C2C-BCFA-43DC-B37E-1298B27D9D94</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -110,7 +110,7 @@ else
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>EDA99621-5C97-42F7-AA2A-BD7EB09184D7</string>
+			<string>A49356F8-85D2-4AC3-BBC3-36F9FD346FF5</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -130,7 +130,7 @@ app.UseDefaultFiles();
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>094E2261-AEEE-4ACD-B2F3-78681B8D5EAE</string>
+			<string>E555307F-C428-401D-A137-03785F27ACB5</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -148,7 +148,7 @@ app.UseDefaultFiles();
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>4CB994E8-21D4-4BC1-A076-D100B351AE45</string>
+			<string>9F5BF629-3DBA-4FAC-8520-3378027A5B1C</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -166,7 +166,7 @@ app.UseDefaultFiles();
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>C128CC8F-9AA3-4FF5-A636-E74E1F16EC4F</string>
+			<string>911CF3D2-DD76-4EB1-ABC6-560E36B9F400</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -184,7 +184,7 @@ app.UseDefaultFiles();
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>B0A94DA8-70B0-4FC5-B90E-76613758776E</string>
+			<string>0D51F559-A838-44D5-BC85-E4ECF285ACBC</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -202,7 +202,7 @@ app.UseDefaultFiles();
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>9BCC4D7E-C9FA-4924-BF87-F7562E3C114D</string>
+			<string>CC3FCF78-6080-4DD0-ACA3-9052444E1777</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -230,7 +230,7 @@ app.UseDefaultFiles();
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>BBBF9DA7-6103-4FD4-B079-1EB664063170</string>
+			<string>66787B0F-7DF0-4183-ABE2-A3F02015415F</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -250,7 +250,7 @@ app.UseDefaultFiles();
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>119F7B35-12BF-4913-85D3-DCA5A8572B8A</string>
+			<string>2D4FB93E-9AE5-4FC3-8A83-8CF3F01386D0</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -268,7 +268,7 @@ app.UseDefaultFiles();
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>5300BCE4-AC7F-4402-8D22-D20150096CF6</string>
+			<string>EB87BE24-46B7-41BF-86FF-80D92379A343</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -298,7 +298,7 @@ namespace EmptyApplication.Models
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>C18775B9-1267-4527-A36A-1E91D55874E0</string>
+			<string>784744BB-B67E-4B97-A140-8BF25AFBE093</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -337,7 +337,7 @@ namespace EmptyApplication.Data
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>B60A0F9C-36D6-4B0B-B163-F1474A66DDA1</string>
+			<string>542BF06F-F15F-43B1-A526-1126CBD7FF16</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -369,7 +369,7 @@ namespace EmptyApplication.Data
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>B3024B0F-3619-4445-84CF-A904583CB383</string>
+			<string>0471FC4F-D2BF-47B0-8F25-FE2AA4B85F87</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -437,7 +437,7 @@ namespace EmptyApplication.Data
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>DF12B7BB-9B49-4C77-843B-27FC9BDD34CA</string>
+			<string>48A29B22-6F92-4C8E-AD58-6B048E4C7A94</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -459,7 +459,7 @@ namespace EmptyApplication.Data
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>4E2C89EB-3A8D-44D7-BF59-A1B8B5A270A0</string>
+			<string>9ECF1678-9949-4089-A952-71ECFC39B11B</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -481,7 +481,7 @@ namespace EmptyApplication.Data
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>0A38F859-2C95-4B54-971A-6E49450BBF3B</string>
+			<string>FBFA12C5-299B-4367-BE50-4CA15C1BF57A</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -507,7 +507,7 @@ namespace EmptyApplication.Data
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>0F459F52-CD85-4FC2-A714-7141CA4B9835</string>
+			<string>63F3744F-948B-408C-96D2-A282D6391B33</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -555,7 +555,7 @@ public class HomeController : Controller
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>E1B5E589-53ED-4329-9BFC-90E78E6CCEE3</string>
+			<string>EE8287B3-DF55-45B8-BFAB-5A05FB82BBD8</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -581,7 +581,7 @@ public class HomeController : Controller
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>33802084-0E13-4D4F-BB79-B9BDE2ACB80D</string>
+			<string>F67523A8-D8F5-439D-9280-EE57BDD363CC</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -601,7 +601,7 @@ using EmptyApplication.Data;
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>613C2A24-EA94-4DF4-B44B-00367FA6C0EA</string>
+			<string>9A1B0115-F35A-4568-A863-876707AE50A8</string>
 		</dict>
 		<dict>
 			<key>abbreviation</key>
@@ -613,11 +613,11 @@ using EmptyApplication.Data;
 			<key>label</key>
 			<string></string>
 			<key>modificationDate</key>
-			<date>2015-09-11T18:59:36Z</date>
+			<date>2015-11-05T21:32:05Z</date>
 			<key>plainText</key>
 			<string>{
 	"projects": [
-		"source"
+		"src"
 	],
 	"sdk": {
 		"version": "1.0.0-beta7"
@@ -627,7 +627,7 @@ using EmptyApplication.Data;
 			<key>snippetType</key>
 			<integer>0</integer>
 			<key>uuidString</key>
-			<string>03868EFA-7F06-490E-AE29-CC60F2B74E8E</string>
+			<string>CE0D3FDE-B887-4137-AD91-B475F47EA0A7</string>
 		</dict>
 	</array>
 </dict>

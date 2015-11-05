@@ -1,0 +1,346 @@
+
+ASP.NET 5
+
+TODO
+
+Specifying Source Paths
+    Try out loading MVC from source
+        Add code path to global.json
+
+Prepare plan if I don't have internet connectivity
+    Have local app (or VM) that has a project with all of the necessary dependencies installed
+    Prepare slides that walks through the environment setup steps
+    Prepare slides that shows how the deployment to Azure works???
+
+Play around further Tag Helpers
+    Setup Bootstrap Tag Helpers NuGet package???
+    Update on Tag Helpers
+        https://channel9.msdn.com/Shows/Web+Camps+TV/Update-on-TagHelpers-with-Taylor-Mullen
+
+Managing client packages
+    Do you need Gulp or Grunt to be installed???
+    Using Gulp
+        http://go.microsoft.com/fwlink/?LinkID=517849
+    Install Bower as part of my setup???
+    Play around with using bower or npm to load Knockout (or Bootstrap, or ???)
+        Hook into project.json scripts element to call "bower install" or "npm install" to ensure that the appropriate packages are restored
+    Play around with using gulp to catenate and minify scripts???
+
+Do more testing with EF7
+    Can you connect to a remote database (i.e. in Azure)???
+    Create semi-interesting set of model classes
+        1:many
+        many:many
+        1:1
+        Other???
+    Working with the in-memory database
+        Does this work as well???
+
+
+
+.NET 2015
+///////////////////////////////////////////////////////
+
+Encompasses both .NET Framework 4.6 and .NET Core 5
+.NET Framework 4.6
+    ASP.NET 5
+    ASP.NET 4.6
+    WPF
+    Windows Forms
+.NET Core 5
+    ASP.NET 5 (including Mac and Linux)
+    .NET Native
+Common
+    Runtime
+    Compilers (Rosalyn and Languages)
+NuGet Packages
+    .NET Core 5 Libraries
+    .NET Framework 4.6 Libraries
+
+.NET Core 5
+
+Designed from the ground-up as an optimized stack for server and cloud workloads
+Completely open source stack and can run on multiple operating systems
+.NET Native and ASP.NET 5 share the same Base Class Library (BCL)
+Bin deployed with your application
+
+.NET Core and NuGet
+
+Set of fine grained NuGet packages
+The BCL layer we’ll have a 1-to-1 relationship between assemblies and NuGet packages
+
+ASP.NET 5
+
+Unified framework targeting MVC, Web API and SignalR (delayed until Spring 2016), all of them in a single framework
+Seamless and “by default” integration with Microsoft Azure and Windows Server through simplified configuration
+Rich ecosystem of composable NuGet packages
+End to end decoupled stack (ASP.NET and .NET) based on Dependency Injection provided out-of-the-box
+
+Limitations of .NET Core
+
+Cryptography: Some of the System.Security.Cryptography.X509Certificates library is not yet implemented.
+Networking: Most of the networking libraries are not yet available. System.Net.Primitives and System.Net.NameResolution are only partially functional and System.Net.Http works only for common success scenarios.
+I/O: Paths up to the system-supported max path length are allowed, except for a few situations related to loading applications, assemblies, and resources.
+Globalization: Culture is assumed to be invariant and string operations related to sorting and searching assume ASCII.
+Data: SqlClient is not currently functional.
+
+
+
+ASP NET 5 Internals Deep Dive
+///////////////////////////////////////////////////////
+
+You can just delete runtimes from the file system to remove them
+
+Default and aliases are just stored in text files
+
+dnvm is global while dnx and dnu are runtime specific
+
+"default" runtime is in the system path while "active" is in the session path
+
+
+
+Internals of ASP.NET 5
+///////////////////////////////////////////////////////
+
+Middleware options
+    Use() - Run and continue to next (or exit)
+    Map() - Route match and fork
+    Run() - Run and exit
+
+
+
+Deep Dive Into the Insides of ASP.NET 5
+///////////////////////////////////////////////////////
+
+MVC 5 depended on System.Web.dll
+    System.Web contained code related to Classic ASP
+
+Full stack is open source
+    Completely out in the open... no secrets
+    Anyone can do pull requests against any part of the stack
+
+Use whatever tools you want
+    Everything runs from the command line
+
+Rosalyn is used to dynamically compile your app at runtime
+
+project.json
+    Combines parts of .csproj and package.config
+
+Dependencies only need to specified at the parent level
+
+wwwroot is the root of the application that the web server will use
+
+"dnx kestrel" maps to the "kestrel" command
+
+Startup
+    Configuration in the constructor
+        web.config and transforms have gone away
+    Configuring services
+    Adding middleware
+
+Command line tools
+    Used to be the "k" tools
+    kre -> dnx
+    kvm -> dnvm
+    kpm -> dnu
+
+Versioning
+    You can have multiple versions available in your dev environment
+    You can deploy apps that use different versions
+        Runtime is deployed with your app
+
+Everything that you can do from Linux and Mac you can do from Windows
+
+Kestrel
+    Cross platform web server developed by Microsoft
+    Built on top of libuv
+
+dnu can be used to package or publish your app
+
+
+
+BUILD 2015 - Introducing ASP.NET 5
+///////////////////////////////////////////////////////
+
+TODO
+
+
+
+BUILD 2015 - ASP.NET Deep Dive
+///////////////////////////////////////////////////////
+
+Command Line Tools
+    dnvm - Version manager
+    dnx - Execute app
+    dnu - Everything else
+
+project.json - commands
+    Defines the entry point(s) for your app
+    "web" - References Microsoft.AspNet.Hosting looks for Startup class in your project
+
+DI
+    Now baked into the platform
+    IApplicationEnvironment is an example of a dnx type that you can ask for in the Startup class
+    You can inject into Controllers, Views, and Tag Helpers
+    ILoggerFactory is an new logging mechanism that is available to inject into your Controllers
+
+global.json
+    You can add additional source code paths to this configuration file
+    dnx will then attempt to load your dependencies from that path
+
+Class Library (Project)
+    dnx project without wwwroot folder
+    Produces a Nuget package
+    You can still just add it to a web project by adding a reference
+    You can build your project against multiple frameworks
+        You no longer need to link files into separate projects
+    You get a target combo box to select the framework
+        You'll only see compilation errors for the selected framework
+        VS Code will actually show you errors for all of your target frameworks
+    dnx builds from source so by default you get any output from a Class Library project
+        Go to the project defaults to enable output
+        Creates a Nuget Package
+            You can use Nuget Package Explorer to view the contents of the package
+            Within the package are the .dlls
+                Stored within TFM (Target Framework Moniker) folders
+    "dnu build" - builds the project
+    "dnu pack" - creates the package
+
+Tag Helpers
+    Can be kept anywhere in your project
+    You just need to implement an interface (or inherit from a base class)
+    The interface just has two members
+        Order property
+        ProcessAsync() method
+    The name of the Tag Helper class is important
+        "RepeatTagHelper" results in a Tag Helper element named "repeat"
+    The Tag Helper can be an element or attached to existing elements as an attribute
+    Tag Helpers need to be declared in the _GlobalImport.cshtml view
+        _ViewStart.cshtml contains all of your global imperative code
+        _GlobalImport.cshtml contains all of your declarative statements
+    In Razor, Tag Helper element attribute values are C# code
+
+Commands
+    Start with a dnx Console App project
+    Publish to a Nuget package
+    Allows that Nuget package to be installed by others
+    Once installed that command is now available globally from the command line
+
+
+Pluralsight Course Notes
+///////////////////////////////////////////////////////
+
+The Big Three Changes
+
+New Project System
+    File based project system
+        No project file
+        No longer need to manage merge conflicts in .csproj
+    Dynamic compilation
+    New default folder structure
+
+Cloud Optimized Core CLR
+    Fast and lean runtime for the server
+    CLR wrapped in a NuGet package
+    Runs outside of Windows
+
+Unification
+    MVC 6 == ASP.NET MVC + Web API
+    Less overhead, less duplication
+    No System.Web
+
+Walkthrough
+
+Show how adding files to the file system adds files to your project
+Show that you can add a .cs file through the file system and it will dynamically compile into the app
+Models, controllers, views, Razor, etc. are all still here
+The root of the website is no longer the root of the project
+    wwwroot is the root of the site
+    Contains all of the static content for the site (CSS and JS)
+    Views are not contained in wwwroot because they are compiled
+No web.config file
+No Global.asax(.cs) file
+
+Project Dependencies
+    Specified using the project.json file
+    NuGet package manager is no longer a dialog (yay!)
+    You can also just edit the project.json file (with Intellisense)
+    Packages are no longer stored in a "packages" Solution folder
+        See the .kpm folder under your user folder
+    The References folder in the Solution Explorer provides a nice visual dislay of your dependencies
+
+ASP.NET 5 vs ASP.NET 5 Core
+    Full .NET framework vs core framework
+    Core framework is ~1/10 of the size... so stuff is missing
+    List of frameworks is listed in the project.json file
+        The project will be compiled for every framework listed
+    Intellisense will tell you what properties and methods are not available in the Core framework
+    Can use "#if" directives to provide code for specific frameworks
+        ASPNET50 vs ASPNETCORE50
+    Project Properties dialog allows you to specify your runtime
+    Runtime .dlls are stored in the .kre folder under your user folder
+
+kre - "k" runtime environment
+    Loads your application into the app domain
+    Project settings allows you to specify which target to use when debugging
+    The Core CLR is stored in the /Users/bitmask/kre folder
+    NuGet packages are stored in the /Users/bitmask/kpm folder
+
+Class Libraries
+    Uses the same compilation model as the web application project
+    global.json "sources" property specifies where source code can be found
+    The project.json dependencies can reference class libraries
+        ASP.NET will always look in the source and test folders for projects that match the dependency name
+
+Startup and Middleware
+    Startup class is the entry point
+    Used to configure the application
+    You can use app.Run() to write content to the context
+    You can use app.UseWelcomePage() to display generic welcome page
+
+Startup and MVC Services
+    Add the Microsoft.AspNet.Mvc package
+    Two phase startup... ConfigureServices(IServiceCollection) and Configure(IApplicationBuilder)
+        services.AddMvc();
+        app.UseMvc();
+    Add a Home controller with an Index() method and you're good to go
+    Customizing a route is easy
+        app.UseMvc(routes => routes.MapRoute("default", "{controller=Home}/{action=Default}"));
+    Attribute based routing is also still available with some minor improvements
+        [Route("/[controller]")] or [Route("/[action]")]
+
+Injecting Services
+    Configure services on the DI container using the services.AddInstance<>() method
+        Alternative method is AddSingleton()
+    AddScoped() is per request instance
+    AddTransient() is per call instance
+
+Working with Configuration
+    Add a config.json file to the root of the project
+    Add the Microsoft.Framework.ConfigurationModel.Json package
+    Configuration = new Configuration()
+        .AddJsonFile("config.json")
+        .AddEnvironmentVariables();
+
+Web API Controllers
+    Same base controller type as standard MVC controllers
+    "Accept" header can be used to indicate what content type you want
+
+KVM (or dnvm)
+    Used to manage your installed ASP.NET 5 runtimes
+    You can install, update, or set your runtime
+
+K (or dnx)
+    Allows you to execute the commands that are defined in project.json
+
+Bower for Front-End Packages
+    Make sure that you install bower using npm
+    Install packages using `bower install jquery --save`
+    Add scripts element to the project.json file to call "bower install"
+
+Grunt for JS Tasks
+    Allows you to write front end build tasks
+    Allows you to do tasks like transpiling, concatenating, and minifying
+
+KPM (dnpm) and Deployment

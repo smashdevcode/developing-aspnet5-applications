@@ -1,21 +1,53 @@
 
 # TODO
 
-1. Test wireless slide remote in Sandbox
-1. Rehearse demos
-1. Practice code snippets
+1. Update the Yeoman ASP.NET templates
+1. Review DNX installation instructions and steps
+ 1. Looks like the installation on Mac OS X has changed??? http://docs.asp.net/en/latest/getting-started/installing-on-mac.html
+1. Update the setup.md file
+1. Update the Yeoman ASP.NET templates in the Sandbox image
+1. Run through slides
+1. Run through demo
 1. Test publishing to Azure
-1. Copy Sandbox to newly renamed GCAD disk
+1. Reset the Dry Run image
+1. Reset the Live image
 
 New Features to Test
 
 1. Referencing a dependency that specifies a newer version of the runtime will
 now cause a specific error to display
+1. dnx-watch
+1. Others???
+
+## ASP.NET Updates
+
+Blog post announcing the release of Beta8
+	http://blogs.msdn.com/b/webdev/archive/2015/10/15/announcing-availability-of-asp-net-5-beta8.aspx
+
+Beta8
+
+* New hosting model
+* Only Kestrel is available now
+* IIS will be used as a reserve proxy
+* VS tooling improvements
+
+RC
+
+* Logging improvements
+* Ability to dial up or down logging per ASP.NET section
+* Pretty printed console logging (i.e. green, yellow, red)
+* More Kestrel perf improvements
+
+How to find out about changes
+
+* Announcements repo on GitHub is a list of all of the changes
+* Release notes
+
+Path to RTM
+
+* The goal is that an app that runs on RC will run on RTM without any (or few) changes
 
 ## Questions
-
-1. Put my presentation notes on my Surface so that I can reference that during my presentation???
-    Is there a way to disable power save so that the tablet will stay on???
 
 ## Preparation
 

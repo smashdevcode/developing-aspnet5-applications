@@ -2,14 +2,10 @@
 # TODO
 
 1. Reset the Live image
-1. Fix the globaljson code snippet ("source" should be "src")
-1. Export the code snippets to the repo
+
+1. Import the new code snippets
 1. Remove the old GitHub repo
 1. Clone the new GitHub repo
-
-1. Run through slides
-1. DONE Run through demo
-1. DONE Test publishing to Azure
 
 New Features to Test
 

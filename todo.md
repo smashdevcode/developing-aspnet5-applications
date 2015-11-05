@@ -9,6 +9,10 @@
 1. Export the code snippets to the repo
 
 1. Just plan on installing Beta7 and building out another demo app with that for deploying to Azure???
+1. Use Visual Studio instead of Mac OS X???
+ 1. http://docs.asp.net/en/latest/getting-started/installing-on-windows.html#install-asp-net-with-visual-studio
+ 1. Build the app in Mac OS X and publish from Windows using VS???
+1. Just skip deploying to Azure???
 
 1. Update references to `dnx kestrel` to `dnx web`
 
